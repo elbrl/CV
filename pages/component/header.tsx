@@ -8,13 +8,11 @@ interface Languages {
 }
 
 export default function Header() {
-  // Use state to track the language checkboxes
   const [languages, setLanguages] = useState<Languages>({
     mongol: false,
     english: false,
     japanese: false,
   });
-  // Function to handle checkbox click
   const handleCheckboxClick = (language: keyof Languages) => {
     setLanguages((prevLanguages) => ({
       ...prevLanguages,
@@ -37,13 +35,13 @@ export default function Header() {
             display: "flex",
             width: "90vw",
             alignItems: "center",
-            justifyContent: "flex-end",
+            justifyContent: "center",
           }}
         >
           <div
             style={{
               height: "10vh",
-              width: "80vw",
+              width: "60vw",
               color: "white",
               fontSize: "25px",
               display: "flex",
@@ -53,47 +51,47 @@ export default function Header() {
           >
             <Link href="/">
               {languages.japanese ? (
-                <div>家</div>
+                <div className="headerButton">家</div>
               ) : languages.mongol ? (
-                <div>Гэр</div>
+                <div className="headerButton">Нүүр</div>
               ) : (
-                <div>Home</div>
+                <div className="headerButton">Home</div>
               )}
             </Link>
             <Link href="/educationscreen">
               {languages.japanese ? (
-                <div>教育</div>
+                <div className="headerButton">教育</div>
               ) : languages.mongol ? (
-                <div>Боловсрол</div>
+                <div className="headerButton">Боловсрол</div>
               ) : (
-                <div>Education</div>
+                <div className="headerButton">Education</div>
               )}
             </Link>
             <Link href="/skillscreen">
               {languages.japanese ? (
-                <div>スキル</div>
+                <div className="headerButton">スキル</div>
               ) : languages.mongol ? (
-                <div>Чадвар</div>
+                <div className="headerButton">Чадвар</div>
               ) : (
-                <div>Skills</div>
+                <div className="headerButton">Skills</div>
               )}
             </Link>
             <Link href="/personal-infoscreen">
               {languages.japanese ? (
-                <div>情報</div>
+                <div className="headerButton">情報</div>
               ) : languages.mongol ? (
-                <div>Мэдээлэл</div>
+                <div className="headerButton">Мэдээлэл</div>
               ) : (
-                <div>Information</div>
+                <div className="headerButton">Information</div>
               )}
             </Link>
             <Link href="/hobbyscreen">
               {languages.japanese ? (
-                <div>趣味</div>
+                <div className="headerButton">趣味</div>
               ) : languages.mongol ? (
-                <div>Сонирхол</div>
+                <div className="headerButton">Сонирхол</div>
               ) : (
-                <div>Hobby</div>
+                <div className="headerButton">Hobby</div>
               )}
             </Link>
           </div>

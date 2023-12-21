@@ -6,20 +6,13 @@ export default function Home() {
     <div>
       <div
         style={{
-          // backgroundColor: "black",
+          backgroundColor: "black",
           zIndex: -1,
           position: "fixed",
           width: "100vw",
           height: "100vh",
         }}
-      >
-        <Image
-          src="/background.jpg"
-          alt="light"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+      ></div>
       <Header />
     </div>
   );

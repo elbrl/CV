@@ -1,27 +1,18 @@
-import Image from "next/image";
 import Header from "./component/header";
 
-const Education: React.FC = () => {
+export default function Education() {
   return (
-    <>
+    <div>
       <div
         style={{
+          backgroundColor: "black",
           zIndex: -1,
           position: "fixed",
           width: "100vw",
           height: "100vh",
         }}
-      >
-        <Image
-          src="/background.jpg"
-          alt="light"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+      ></div>
       <Header />
-    </>
+    </div>
   );
-};
-
-export default Education;
+}

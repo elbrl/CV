@@ -1,27 +1,20 @@
-import Image from "next/image";
 import Header from "./component/header";
+import RowScroll from "./component/rowscroll";
 
-const Skills: React.FC = () => {
+export default function Skills() {
   return (
-    <>
+    <div>
       <div
         style={{
+          backgroundColor: "black",
           zIndex: -1,
           position: "fixed",
           width: "100vw",
           height: "100vh",
         }}
-      >
-        <Image
-          src="/background.jpg"
-          alt="light"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+      ></div>
       <Header />
-    </>
+      <RowScroll />
+    </div>
   );
-};
-
-export default Skills;
+}
